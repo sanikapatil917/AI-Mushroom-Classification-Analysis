@@ -12,7 +12,7 @@ model = None
 def load_mushroom_model():
     global model
     model = load_model(model_path)
-
+    
 # Load the model outside of the Flask app
 load_mushroom_model()
 
