@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Mushroom Classification</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: url('https://images2.alphacoders.com/974/thumb-1920-974622.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .glass-card {
+      background: rgba(177, 177, 177, 0.1);
+      border-radius: 20px;
+      padding: 22px;
+      max-width: 800px;
+      width: 90%;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      color: #ffffff;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      margin-top: 80px;
+    }
+
+    .glass-card h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .glass-card h3 {
+      font-size: 22px;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .glass-card p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #e0e0e0;
+      margin-bottom: 35px;
+    }
+
+ #predict_btn {
+  background: linear-gradient(to right, #5d547c, #8a6bbf, #c299ff);
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(141, 115, 191, 0.3); 
+}
+
+#predict_btn:hover {
+  background: linear-gradient(to right, #c299ff, #8a6bbf, #5d547c);
+  transform: scale(1.05);
+}
+
+
+
+    @media (max-width: 768px) {
+      .glass-card {
+        padding: 30px 20px;
+      }
+
+      .glass-card h1 {
+        font-size: 28px;
+      }
+
+      .glass-card h3 {
+        font-size: 18px;
+      }
+
+      .glass-card p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-card">
+    <h1>AI Mushroom Classification</h1>
+    <h3>Uncovering the Hidden Treasures of the Mushroom Kingdom</h3>
+    <p>
+      This project uses advanced AI techniques like transfer learning and deep learning to classify mushrooms into three primary categories:
+      <strong>Boletus</strong>, <strong>Lactarius</strong>, and <strong>Russula</strong>.
+      Dive into the world of fungi and explore nature’s secrets!
+    </p>
+    <a href="{{ url_for('predict_page') }}">
+      <button id="predict_btn">Start Detection</button>
+    </a>
+  </div>
+</body>
+</html>
